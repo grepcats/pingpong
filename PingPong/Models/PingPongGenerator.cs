@@ -32,7 +32,11 @@ namespace PingPong.Models
     {
       List<string> convertedList = new List<string> {};
       for (int i = 0; i < intList.Count; i++) {
-        if ((i + 1) % 3 == 0)
+        if ((i + 1) % 3 == 0 && (i + 1) % 5 == 0)
+        {
+          convertedList.Add("pingpong");
+        }
+        else if ((i + 1) % 3 == 0)
         {
           convertedList.Add("ping");
         }
@@ -54,5 +58,10 @@ namespace PingPong.Models
     {
       _instances.Clear();
     }
+
+    // public string GetEntry()
+    // {
+    //   return
+    // }
   }
 }

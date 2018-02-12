@@ -6,6 +6,22 @@
     <title></title>
   </head>
   <body>
+    <div class="container">
+      <h1>HELLO</h1>
+      <h2>WOULD YOU LIKE A PING PONG</h2>
+      <form method="post" action="/pingpong">
+        <div class="form-group">
+          <label for="number">GIVE ME A NUMBER</label>
+          <input type="text" name="number">
+        </div>
+        <button type="submit" class="btn btn-danger">OMG</button>
+      </form>
+      @foreach (var entry in @Model)
+      {
+        <p>@entry</p>
+      }
+    </div>
+
 
   </body>
 </html>
