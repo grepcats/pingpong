@@ -28,6 +28,28 @@ namespace PingPong.Models
       return userList;
     }
 
+    public List<string> ReplacePingPong(List<int> intList)
+    {
+      List<string> convertedList = new List<string> {};
+      for (int i = 0; i < intList.Count; i++) {
+        if ((i + 1) % 3 == 0)
+        {
+          convertedList.Add("ping");
+        }
+        else if ((i + 1) % 5 == 0)
+        {
+          convertedList.Add("pong");
+        }
+        else
+        {
+          string conversion = intList[i].ToString();
+          convertedList.Add(conversion);
+        }
+
+      }
+      return convertedList;
+    }
+
     public static void ClearAll()
     {
       _instances.Clear();
